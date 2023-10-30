@@ -1,0 +1,29 @@
+<h2 class="padding:20%"> Product Information</h2>
+<div class="d-flex justify-content-end">
+  <button type="button" class="btn btn-primary ml-auto " style="padding:10px;margin-right: 10px;
+  margin-bottom: 10px;" routerLink="/product/create_p">Create new Product</button>
+</div>
+<div>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Edit</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of  productdata">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.title}}</td>
+        <td><button class="edit" routerLink="/product/edit_p/{{p.id}}">Edit</button></td>
+        <td><button class="view" routerLink="/product/view_p/{{p.id}}">View</button></td>
+      </tr>
+    </tbody>
+  </table>

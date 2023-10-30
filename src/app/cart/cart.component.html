@@ -1,0 +1,39 @@
+<section class="h-100 h-custom" style="background-color: #d2c9ff;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-10">
+                <div class="p-5">
+                  <div class="d-flex justify-content-between align-items-center mb-5">
+                    <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                    <h6 class="mb-0 text-muted">items</h6>
+                  </div>
+                  <hr class="my-4">
+
+                  <div class="row mb-4 d-flex justify-content-between align-items-center" 
+                  *ngFor="let p of purchase_item">
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        src={{p.image}}
+                        class="img-fluid rounded-3" alt="Cotton T-shirt">
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                      <h6 class="text-muted">{{p.title}}</h6>
+                      <!-- <h6 class="text-black mb-0">{{p.category}}</h6>
+                      <h6 class="mb-0">€ {{p.price}}</h6> -->
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+  
